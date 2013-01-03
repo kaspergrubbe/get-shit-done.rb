@@ -1,6 +1,6 @@
 # get-shit-done.rb
 
-This is a Ruby version of Get-Shit-Done done by Vic Cherubini. 
+This is a Ruby version of Get-Shit-Done done by Vic Cherubini, https://github.com/leftnode/get-shit-done 
 
 It has minor differences, and the configuration is not the same, sorry!
 
