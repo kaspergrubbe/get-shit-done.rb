@@ -37,7 +37,7 @@ end
 
 def hosts
   #"foo.com, bar.com, baz.com".split(',').collect!{ |h| h.strip }
-  local = readfile(File.join(File.expand_path('~'), '.config/hosts'))
+  local = readfile(File.join(File.expand_path('~'), '.blockhosts'))
 
   unless local.empty?
     local.split(/\r\n|\n/).collect!{ |h| h.strip }
