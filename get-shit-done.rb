@@ -10,7 +10,7 @@ def add_gsd!
     file.puts ""
     gsd.each do |line|
       file.puts line
-  	end
+    end
   end
 end
 
@@ -30,7 +30,7 @@ def gsd(start_token='## start-gsd', end_token='## end-gsd')
   content << start_token
   hosts.each do |host|
     content << "127.0.0.1  #{host}"
-  	content << "127.0.0.1  www.#{host}"
+    content << "127.0.0.1  www.#{host}"
   end
   content << end_token
 end
@@ -40,9 +40,9 @@ def hosts
   local = readfile(File.join(File.expand_path('~'), '.config/hosts'))
 
   unless local.empty?
-  	local.split(/\r\n|\n/).collect!{ |h| h.strip }
+    local.split(/\r\n|\n/).collect!{ |h| h.strip }
   else
-  	['reddit.com','news.ycombinator.com']
+    ['reddit.com','news.ycombinator.com']
   end
 end
 
@@ -58,20 +58,20 @@ if __FILE__ == $0
   return_flag = "ERROR: Run with sudo" unless ENV['USER'] == 'root'
 
   if return_flag
-  	puts return_flag
+    puts return_flag
   else
     case ARGV[0]
     when "work"
       remove_gsd!
-    	add_gsd!
+      add_gsd!
       flushcache
     when "fun"
       remove_gsd!
       flushcache
     else
-    	puts "Usage:"
-    	puts "  sudo get-shit-done.rb work"
-    	puts "  sudo get-shit-done.rb fun"
+      puts "Usage:"
+      puts "  sudo get-shit-done.rb work"
+      puts "  sudo get-shit-done.rb fun"
     end
   end
 end
