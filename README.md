@@ -20,6 +20,10 @@ To begin, do this:
 
     $ sudo get-shit-done.rb work
 
+To stop working, and start playing do this:
+
+    $ sudo get-shit-done.rb play
+
 If you want to add your own, place them in ´~/.blockhosts´ in this form:
 
 ```
@@ -28,7 +32,3 @@ slashdot.org
 newz.dk
 news.ycombinator.com
 ```
-
-To stop working, and start playing do this:
-
-    $ sudo get-shit-done.rb play
