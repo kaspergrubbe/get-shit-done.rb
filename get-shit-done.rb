@@ -65,13 +65,13 @@ if __FILE__ == $0
       remove_gsd!
       add_gsd!
       flushcache
-    when "fun"
+    when "play"
       remove_gsd!
       flushcache
     else
       puts "Usage:"
       puts "  sudo get-shit-done.rb work"
-      puts "  sudo get-shit-done.rb fun"
+      puts "  sudo get-shit-done.rb play"
     end
   end
 end
