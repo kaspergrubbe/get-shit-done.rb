@@ -61,17 +61,17 @@ if __FILE__ == $0
     puts return_flag
   else
     case ARGV[0]
-    when "work"
+    when "start"
       remove_gsd!
       add_gsd!
       flushcache
-    when "play"
+    when "stop"
       remove_gsd!
       flushcache
     else
       puts "Usage:"
-      puts "  sudo get-shit-done.rb work"
-      puts "  sudo get-shit-done.rb play"
+      puts "  sudo get-shit-done.rb start"
+      puts "  sudo get-shit-done.rb stop"
     end
   end
 end
